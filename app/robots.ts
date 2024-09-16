@@ -1,12 +1,13 @@
-import { baseUrl } from 'app/sitemap'
+import { baseUrl } from "app/sitemap";
+import { MetadataRoute } from "next";
 
-export default function robots() {
-  return {
-    rules: [
-      {
-        userAgent: '*',
-      },
-    ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-  }
+export default function robots(): MetadataRoute.Robots {
+    return {
+        rules: [
+            {
+                userAgent: "*",
+            },
+        ],
+        sitemap: `${baseUrl}/sitemap.xml`,
+    };
 }
